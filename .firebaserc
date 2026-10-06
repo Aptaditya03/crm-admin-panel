@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "clienthandling-1efa6"
+  },
+  "targets": {
+    "clienthandling-1efa6": {
+      "hosting": {
+        "target": [
+          "Client"
+        ],
+        "client": [
+          "clienthandling-1efa6"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

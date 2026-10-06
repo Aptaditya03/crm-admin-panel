@@ -1,0 +1,84 @@
+.table-wrapper .table th,
+.table-wrapper .table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px; /* Adjust as needed */
+    position: relative;
+}
+
+.table-wrapper .table th:hover,
+.table-wrapper .table td:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    max-width: none;
+    z-index: 1;
+}
+
+/* src/AdminDashboard.css */
+
+/* ... (keep all your existing CSS) ... */
+
+/* --- START: Responsive Styles --- */
+
+/* For tablets and smaller devices */
+@media (max-width: 992px) {
+  .permission-input-group .input-group {
+    flex-direction: column;
+  }
+  .permission-input-group .input-group .custom-select-container {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .permission-input-group .input-group button {
+    width: 100%;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .container, .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .d-flex.justify-content-start.align-items-center {
+    flex-wrap: wrap; /* Allows main action buttons to wrap */
+    gap: 0.5rem;
+  }
+
+  .table-section h5 {
+    font-size: 1.1rem;
+  }
+
+  .table th, .table td {
+    font-size: 0.85rem; /* Smaller font for table content */
+    padding: 0.5rem;
+  }
+
+  .selected-user-container .row > div {
+    margin-bottom: 1rem;
+  }
+
+  .position-fixed.bottom-0 {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+  .position-fixed.bottom-0 > div {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+  .position-fixed.bottom-0 .btn-primary {
+    width: 100%;
+  }
+}
+/* --- END: Responsive Styles --- */
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto; /* This is the magic property */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}

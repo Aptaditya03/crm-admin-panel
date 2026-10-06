@@ -1,0 +1,160 @@
+.client-dashboard .table-wrapper {
+  overflow-x: auto;
+}
+
+/* Disable text selection for security */
+.client-dashboard {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow selection in input fields for usability */
+.client-dashboard input,
+.client-dashboard textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.client-dashboard .table th,
+.client-dashboard .table td {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.client-dashboard .table th .custom-select-container {
+  min-width: 150px; /* Ensures dropdowns have enough space */
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* --- START: Responsive Styles --- */
+@media (max-width: 768px) {
+  .client-dashboard .table th,
+  .client-dashboard .table td {
+    font-size: 0.85rem; /* Make font smaller to fit more content */
+    padding: 0.5rem;
+  }
+
+  .client-dashboard h3 {
+    font-size: 1.5rem;
+  }
+}
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto; /* This is the magic property */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+/* --- END: Responsive Styles --- 
+/* Add this to ClientDashboard.css to style the dropdown options */
+
+.custom-select-option {
+  font-size: 0.5rem !important; /* Adjust this value as needed */
+  padding: 5px 6px !important;  /* Adjust padding for spacing */
+}
+
+/* You might also want to style the hover/selected state */
+.custom-select-option.is-focused {
+  background-color: #f0f0f0; /* Lighter hover color */
+}
+
+.custom-select-option.is-selected {
+  background-color: #0d6efd; /* Bootstrap primary color */
+  color: white;
+}
+npm run buildnpm run build
+/* Work Status Color Indicator Styles */
+.work-status-indicator {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-status-indicator:hover {
+  transform: scale(1.15);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3) !important;
+}
+
+.status-dropdown {
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Status color legend */
+.status-legend {
+  display: flex;
+  gap: 15px;
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.status-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+
+.status-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+/* Status colors */
+.status-no-call { background-color: #000000; }
+.status-call { background-color: #dc3545; }
+.status-follow-up { background-color: #ffc107; }
+.status-lead { background-color: #28a745; }
+.status-complete { background-color: #007bff; }
+
+/* Color Picker Styles */
+.status-legend-item {
+  position: relative;
+}
+
+.status-legend-dot {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.status-legend-dot:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.color-picker-popup {
+  animation: fadeInUp 0.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

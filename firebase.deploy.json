@@ -1,0 +1,10 @@
+{
+    "hosting":  {
+                    "public":  "firebase-release-20261005",
+                    "ignore":  [
+                                   "firebase.json",
+                                   "**/.*",
+                                   "**/node_modules/**"
+                               ]
+                }
+}
